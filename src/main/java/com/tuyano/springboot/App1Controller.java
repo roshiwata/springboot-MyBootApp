@@ -21,11 +21,33 @@ public class App1Controller {
         this.restTemplate = restTemplate;
     }
 
-    @GetMapping("/hello")
-    public String hello() {
-        String url = "http://localhost:8082/hello";
-        String response = restTemplate.getForObject(url, String.class);
-        return "App1 received: " + response;
+    @GetMapping("/nice/get")
+    public String niceget() {
+        // String url = "http://localhost:8082/hello";
+        // String response = restTemplate.getForObject(url, String.class);
+        return "NiceGet!";
     }
+
+    @GetMapping("/notnice/get")
+    public String notniceget() {
+        // String url = "http://localhost:8082/hello";
+        // String response = restTemplate.getForObject(url, String.class);
+        return "NotNiceGet!";
+    }
+
+    @GetMapping("/nice/good")
+    public String nicegood() {
+        // String url = "http://localhost:8082/hello";
+        // String response = restTemplate.getForObject(url, String.class);
+        return "NiceGood!";
+    }
+
+    @GetMapping("/notnice/good")
+    public String notnicegood() {
+        // String url = "http://localhost:8082/hello";
+        // String response = restTemplate.getForObject(url, String.class);
+        return "NotNiceGood!";
+    }
+
 }
 

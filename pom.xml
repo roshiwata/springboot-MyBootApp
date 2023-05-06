@@ -14,7 +14,7 @@
 	<name>MyBootApp</name>
 	<description>Sample project for Spring Boot</description>
 	<properties>
-		<docker.image.prefix>wesoffiresis.azurecr.io</docker.image.prefix>
+		<docker.image.prefix>restapispringbootmayacr.azurecr.io</docker.image.prefix>
 		<jib-maven-plugin.version>2.8.0</jib-maven-plugin.version>
 		<java.version>17</java.version>
 	</properties>
@@ -54,7 +54,7 @@
 						<image>mcr.microsoft.com/java/jdk:17-zulu-alpine</image>
 					</from>
 					<to>
-						<image>${docker.image.prefix}/springboo-apply1</image>
+						<image>${docker.image.prefix}/restapi-springboot-niceget</image>
 					</to>
 				</configuration>
 			</plugin>
