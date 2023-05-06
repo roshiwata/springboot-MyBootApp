@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: spring-apply1
+  name: niceget-apply
 spec:
   type: LoadBalancer
   ports: 
@@ -9,25 +9,25 @@ spec:
     targetPort: 8081
     protocol: TCP
   selector: 
-    app: spring-apply1
+    app: niceget-apply
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-apply1
+  name: niceget-apply
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: spring-apply1
+      app: niceget-apply
   template:
     metadata:
       labels:
-        app: spring-apply1
+        app: niceget-apply
     spec:
       containers:
       - name: webapp1
-        image: wesoffiresis.azurecr.io/springboo-apply1:latest
+        image: restapispringbootmayacr.azurecr.io/restapi-springboot-niceget:latest
         ports:
         - containerPort: 80
       imagePullSecrets:
